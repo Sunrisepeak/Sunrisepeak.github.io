@@ -1,0 +1,20 @@
+<svg width="1165" height="532" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_2_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="534" width="1167" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text font-style="italic" font-weight="bold" opacity="0.68" filter="url(#svg_2_blur)" stroke="#000" transform="matrix(1.26192631285232,0,0,2.2491581936677107,-77.45605266510111,-271.01598294917085) " xml:space="preserve" text-anchor="start" font-family="Georgia, Times, 'Times New Roman', serif" font-size="32" id="svg_2" y="211.3751" x="348.849574" stroke-width="0" fill="#000000">SPeak's</text>
+  <text font-style="normal" stroke="#000" transform="matrix(1.492251133450104,0,0,1.982778060953691,-247.29639554670035,-182.81638961560807) " font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Georgia, Times, 'Times New Roman', serif" font-size="35" id="svg_3" y="195.308113" x="501.842928" stroke-width="0" fill="#7AD6CA">Note</text>
+ </g>
+</svg>
