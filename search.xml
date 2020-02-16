@@ -1,3 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
+  <entry>
+    <title>Test Typora</title>
+    <url>/2020/02/16/Test/TestTypora/</url>
+    <content><![CDATA[<h3 id="this-is-Typora-test"><a href="#this-is-Typora-test" class="headerlink" title="this is Typora test"></a>this is Typora test</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"test code"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>T………………</p>
+]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>Test</tag>
+        <tag>Debug</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TestValineCommnet</title>
+    <url>/2020/02/16/Test/TestValineCommnet/</url>
+    <content><![CDATA[<p>Commint………</p>
+]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>Test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TestMathJax</title>
+    <url>/2020/02/16/Test/TestMathJax/</url>
+    <content><![CDATA[<p>….</p>
+<a id="more"></a>
+<script type="math/tex; mode=display">\begin{equation} \label{eq1}
+e=mc^2
+\end{equation}</script>]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>Math</tag>
+        <tag>Test</tag>
+        <tag>Debug</tag>
+      </tags>
+  </entry>
 </search>
