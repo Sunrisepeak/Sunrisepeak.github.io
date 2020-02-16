@@ -3,12 +3,12 @@
   <entry>
     <title>RC-Note/README</title>
     <url>/2020/02/16/RC-Note/README/</url>
-    <content><![CDATA[<!-- build time:Sun Feb 16 2020 21:18:54 GMT+0800 (China Standard Time) --><h1 id="RC-Notes"><a href="#RC-Notes" class="headerlink" title="RC-Notes"></a>RC-Notes</h1><p>Reading&amp;Coding Notes………</p><!-- rebuild by neat -->]]></content>
+    <content><![CDATA[<!-- build time:Sun Feb 16 2020 21:26:48 GMT+0800 (China Standard Time) --><h1 id="RC-Notes"><a href="#RC-Notes" class="headerlink" title="RC-Notes"></a>RC-Notes</h1><p>Reading&amp;Coding Notes………</p><!-- rebuild by neat -->]]></content>
   </entry>
   <entry>
     <title>TestValineCommnet</title>
     <url>/2020/02/16/RC-Note/Test/TestValineCommnet/</url>
-    <content><![CDATA[<!-- build time:Sun Feb 16 2020 21:18:54 GMT+0800 (China Standard Time) --><p>Commint………</p><!-- rebuild by neat -->]]></content>
+    <content><![CDATA[<!-- build time:Sun Feb 16 2020 21:26:48 GMT+0800 (China Standard Time) --><p>Commint………</p><!-- rebuild by neat -->]]></content>
       <categories>
         <category>Test</category>
       </categories>
@@ -19,15 +19,15 @@
   <entry>
     <title>TestMathJax</title>
     <url>/2020/02/16/RC-Note/Test/TestMathJax/</url>
-    <content><![CDATA[<!-- build time:Sun Feb 16 2020 21:18:54 GMT+0800 (China Standard Time) --><p>….</p><a id="more"></a><script type="math/tex;mode=display">\begin{equation} \label{eq1}
+    <content><![CDATA[<!-- build time:Sun Feb 16 2020 21:26:48 GMT+0800 (China Standard Time) --><p>….</p><a id="more"></a><script type="math/tex;mode=display">\begin{equation} \label{eq1}
 e=mc^2
 \end{equation}</script><!-- rebuild by neat -->]]></content>
       <categories>
         <category>Test</category>
       </categories>
       <tags>
-        <tag>Test</tag>
         <tag>Math</tag>
+        <tag>Test</tag>
         <tag>Debug</tag>
       </tags>
   </entry>
