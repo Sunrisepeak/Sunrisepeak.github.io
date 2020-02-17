@@ -33,7 +33,7 @@
 <h6 id="Bit-Op-amp"><a href="#Bit-Op-amp" class="headerlink" title="Bit-Op (&amp;, |)"></a>Bit-Op (&amp;, |)</h6><p>&amp; op</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   000...00011</span><br><span class="line">&amp;  000...00111</span><br><span class="line">------------------------</span><br><span class="line">   000...00011  --&gt; 3</span><br></pre></td></tr></table></figure>
 <p>| op</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   000...00011</span><br><span class="line">|  000...00111</span><br><span class="line">------------------------</span><br><span class="line">   000...00111  --&gt; 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   000...00011</span><br><span class="line">|  000...00111</span><br><span class="line">------------------------</span><br><span class="line">   000...00111  --&gt; 7</span><br></pre></td></tr></table></figure>
 <h6 id="Logic-Op-amp-amp"><a href="#Logic-Op-amp-amp" class="headerlink" title="Logic-Op (&amp;&amp;, ||)"></a>Logic-Op (&amp;&amp;, ||)</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">7 &amp;&amp; 3 --&gt;  true &amp;&amp; true --&gt; true(1)</span><br></pre></td></tr></table></figure>
 <p>|| op</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">7 || 3 --&gt;  true &amp;&amp; true --&gt; true(1)</span><br></pre></td></tr></table></figure>
@@ -55,9 +55,9 @@
       </categories>
       <tags>
         <tag>c++</tag>
-        <tag>Bit-Op</tag>
         <tag>位操作</tag>
-        <tag>Logic-Op</tag>
+        <tag>Bit-OP</tag>
+        <tag>Logic-OP</tag>
       </tags>
   </entry>
   <entry>
