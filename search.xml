@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CppPrimer5th Exrecise Section 4.8</title>
+    <url>/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/</url>
+    <content><![CDATA[<h3 id="Ex-4-25"><a href="#Ex-4-25" class="headerlink" title="Ex: 4.25"></a>Ex: 4.25</h3><p>在<code>int</code>为32bit，<code>q</code> 的位模式为 <code>01110001</code> 的情况下<code>~&#39;q&#39; &lt;&lt; 6</code>的结果是？</p>
+<h4 id="Program-Test-g-for-linux"><a href="#Program-Test-g-for-linux" class="headerlink" title="Program Test(g++ for linux)"></a>Program Test(g++ for linux)</h4><h5 id="C-Code"><a href="#C-Code" class="headerlink" title="C++ Code"></a>C++ Code</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> c = <span class="string">'q'</span>;  <span class="comment">// 01110001</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> ans = ~c &lt;&lt; <span class="number">6</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-7296</span><br></pre></td></tr></table></figure>
+<h4 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h4><h5 id="Code-Perform-Step"><a href="#Code-Perform-Step" class="headerlink" title="Code Perform Step"></a>Code Perform Step</h5><ul>
+<li><p>left-associative:  <code>~&#39;q&#39; &lt;&lt; 6</code> equivalence with <code>(~&#39;q&#39;) &lt;&lt; 6</code></p>
+</li>
+<li><p>promoted to int for <code>~&#39;q&#39;</code>:  <code>~(01110001b)</code> to <code>~(00000000 00000000 00000000 01110001 b)</code></p>
+</li>
+<li><p>Bitwise Not operator(<code>~</code>): <code>(11111111 11111111 11111111 1000110b) &lt;&lt; 6</code></p>
+<a id="more"></a></li>
+<li><p>left-shift operator(<code>&lt;&lt;</code>) : <code>11 11111111 11111111 1000110 000000b</code></p>
+</li>
+<li><p>computation binary number:</p>
+<p>   11111111 11111111 1110001 10000000b<br>   True form: 10000000 00000000 0001110 10000000 b</p>
+<p>​    -(2^11 + 2^10 + 2^9 + 2^7)  =  - (2048 + 1024 + 512 + 128) = -3712 what? Oh, No</p>
+</li>
+</ul>
+<h5 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">oh, lose an zero in Bitwise Not operator step. so computation:</span><br><span class="line">modify:</span><br><span class="line">   (11111111 11111111 11111111 100011 1 0b) &lt;&lt; 6</span><br><span class="line">    11111111 11111111 11100011 10000000 b</span><br><span class="line">new [true form] : 10000000 00000000 00011100 10000000 b</span><br><span class="line">  - (2^12 + 2^11 + 2^10  + 2^7) &#x3D; - (4096 + 2048 + 1024 + 128) &#x3D; -7296 Oh, Yell</span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<h3 id="Ex-4-26"><a href="#Ex-4-26" class="headerlink" title="Ex:4.26"></a>Ex:4.26</h3><ul>
+<li>Because of Bits of int type could different in machine.As usual, it’s is that great than and quals 16bit.</li>
+</ul>
+<h3 id="Ex-4-27"><a href="#Ex-4-27" class="headerlink" title="Ex:4.27"></a>Ex:4.27</h3><p>What is the result of each of these of expressions?</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">long</span> ull = <span class="number">3</span>, ul2 = <span class="number">7</span>;</span><br><span class="line">	(a) ull &amp; ul2 </span><br><span class="line">    (b) ull | ul2 </span><br><span class="line">    (c) ull &amp;&amp; ul2 </span><br><span class="line">    (d) ull || ul2</span><br></pre></td></tr></table></figure>
+<h4 id="Program-Test-g-for-linux-1"><a href="#Program-Test-g-for-linux-1" class="headerlink" title="Program Test(g++ for linux)"></a>Program Test(g++ for linux)</h4><h5 id="C-Code-1"><a href="#C-Code-1" class="headerlink" title="C++ Code"></a>C++ Code</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> ul1 = <span class="number">3</span>, ul2 = <span class="number">7</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (ul1 &amp; ul2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (ul1 | ul2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (ul1 &amp;&amp; ul2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (ul1 || ul2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3</span><br><span class="line">7</span><br><span class="line">1</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<h4 id="Analysis-1"><a href="#Analysis-1" class="headerlink" title="Analysis"></a>Analysis</h4><h5 id="Binary-Number-View-bit-op-amp-logic-op"><a href="#Binary-Number-View-bit-op-amp-logic-op" class="headerlink" title="Binary Number View(bit op &amp; logic op)"></a>Binary Number View(bit op &amp; logic op)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ul1 &#x3D; 3  -&gt;  000...00011</span><br><span class="line">ul2 &#x3D; 7  -&gt;  000...00111</span><br></pre></td></tr></table></figure>
+<h6 id="Bit-Op-amp"><a href="#Bit-Op-amp" class="headerlink" title="Bit-Op (&amp;, |)"></a>Bit-Op (&amp;, |)</h6><p>&amp; op</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   000...00011</span><br><span class="line">&amp;  000...00111</span><br><span class="line">------------------------</span><br><span class="line">   000...00011  --&gt; 3</span><br></pre></td></tr></table></figure>
+<p>| op</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   000...00011</span><br><span class="line">|  000...00111</span><br><span class="line">------------------------</span><br><span class="line">   000...00111  --&gt; 3</span><br></pre></td></tr></table></figure>
+<h6 id="Logic-Op-amp-amp"><a href="#Logic-Op-amp-amp" class="headerlink" title="Logic-Op (&amp;&amp;, ||)"></a>Logic-Op (&amp;&amp;, ||)</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">7 &amp;&amp; 3 --&gt;  true &amp;&amp; true --&gt; true(1)</span><br></pre></td></tr></table></figure>
+<p>|| op</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">7 || 3 --&gt;  true &amp;&amp; true --&gt; true(1)</span><br></pre></td></tr></table></figure>
+<h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><ul>
+<li>Ubuntu 18.x</li>
+<li>g++ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0</span><br><span class="line">Copyright (C) 2017 Free Software Foundation, Inc.</span><br><span class="line">This is free software; see the source for copying conditions.  There is NO</span><br><span class="line">warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
+<li>cpp primer 5th</li>
+<li>Youdao Dictionary (ha ha)[This is the worst he had ever been back a pot]</li>
+</ul>
+]]></content>
+      <categories>
+        <category>c++</category>
+        <category>cpp-primer</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>Bit-Op</tag>
+        <tag>位操作</tag>
+        <tag>Logic-Op</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Test Typora</title>
     <url>/2020/02/16/Test/TestTypora/</url>
     <content><![CDATA[<h3 id="this-is-Typora-test"><a href="#this-is-Typora-test" class="headerlink" title="this is Typora test"></a>this is Typora test</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"test code"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

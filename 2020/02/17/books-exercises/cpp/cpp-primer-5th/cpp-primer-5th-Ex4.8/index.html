@@ -20,22 +20,23 @@
     var CONFIG = {"hostname":"sunrisepeak.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#789","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="this is Typora test123456#include &lt;iostream&gt;using std::cout;int main() &amp;#123;    cout &lt;&lt; &quot;test code&quot;;    return 0;&amp;#125;">
+  <meta name="description" content="Ex: 4.25在int为32bit，q 的位模式为 01110001 的情况下~&#39;q&#39; &lt;&lt; 6的结果是？ Program Test(g++ for linux)C++ Code123456789#include &lt;iostream&gt;int main() &amp;#123;    unsigned char c &#x3D; &#39;q&#39;;  &#x2F;&#x2F; 01110001">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test Typora">
-<meta property="og:url" content="https://sunrisepeak.github.io/2020/02/16/Test/TestTypora/index.html">
+<meta property="og:title" content="CppPrimer5th Exrecise Section 4.8">
+<meta property="og:url" content="https://sunrisepeak.github.io/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/index.html">
 <meta property="og:site_name" content="SPeakNote">
-<meta property="og:description" content="this is Typora test123456#include &lt;iostream&gt;using std::cout;int main() &amp;#123;    cout &lt;&lt; &quot;test code&quot;;    return 0;&amp;#125;">
+<meta property="og:description" content="Ex: 4.25在int为32bit，q 的位模式为 01110001 的情况下~&#39;q&#39; &lt;&lt; 6的结果是？ Program Test(g++ for linux)C++ Code123456789#include &lt;iostream&gt;int main() &amp;#123;    unsigned char c &#x3D; &#39;q&#39;;  &#x2F;&#x2F; 01110001">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-16T13:58:34.000Z">
-<meta property="article:modified_time" content="2020-02-16T14:18:22.600Z">
+<meta property="article:published_time" content="2020-02-17T04:49:58.064Z">
+<meta property="article:modified_time" content="2020-02-17T06:45:45.117Z">
 <meta property="article:author" content="SPeak Shen">
-<meta property="article:tag" content="Test">
-<meta property="article:tag" content="Debug">
-<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="Bit-Op">
+<meta property="article:tag" content="位操作">
+<meta property="article:tag" content="Logic-Op">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://sunrisepeak.github.io/2020/02/16/Test/TestTypora/">
+<link rel="canonical" href="https://sunrisepeak.github.io/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/">
 
 
 <script id="page-configurations">
@@ -47,7 +48,7 @@
   };
 </script>
 
-  <title>Test Typora | SPeakNote</title>
+  <title>CppPrimer5th Exrecise Section 4.8 | SPeakNote</title>
   
 
 
@@ -189,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sunrisepeak.github.io/2020/02/16/Test/TestTypora/">
+    <link itemprop="mainEntityOfPage" href="https://sunrisepeak.github.io/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -202,7 +203,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          Test Typora
+          CppPrimer5th Exrecise Section 4.8
         </h2>
 
         <div class="post-meta">
@@ -213,7 +214,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-16 21:58:34 / 修改时间：22:18:22" itemprop="dateCreated datePublished" datetime="2020-02-16T21:58:34+08:00">2020-02-16</time>
+              <time title="创建时间：2020-02-17 12:49:58 / 修改时间：14:45:45" itemprop="dateCreated datePublished" datetime="2020-02-17T12:49:58+08:00">2020-02-17</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -221,14 +222,20 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Test/" itemprop="url" rel="index">
-                    <span itemprop="name">Test</span>
+                  <a href="/categories/c/" itemprop="url" rel="index">
+                    <span itemprop="name">c++</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/c/cpp-primer/" itemprop="url" rel="index">
+                    <span itemprop="name">cpp-primer</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/02/16/Test/TestTypora/" class="post-meta-item leancloud_visitors" data-flag-title="Test Typora" title="阅读次数">
+            <span id="/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/" class="post-meta-item leancloud_visitors" data-flag-title="CppPrimer5th Exrecise Section 4.8" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -243,8 +250,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/02/16/Test/TestTypora/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/16/Test/TestTypora/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -254,14 +261,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>120</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -273,9 +280,49 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="this-is-Typora-test"><a href="#this-is-Typora-test" class="headerlink" title="this is Typora test"></a>this is Typora test</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"test code"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>T………………</p>
+        <h3 id="Ex-4-25"><a href="#Ex-4-25" class="headerlink" title="Ex: 4.25"></a>Ex: 4.25</h3><p>在<code>int</code>为32bit，<code>q</code> 的位模式为 <code>01110001</code> 的情况下<code>~&#39;q&#39; &lt;&lt; 6</code>的结果是？</p>
+<h4 id="Program-Test-g-for-linux"><a href="#Program-Test-g-for-linux" class="headerlink" title="Program Test(g++ for linux)"></a>Program Test(g++ for linux)</h4><h5 id="C-Code"><a href="#C-Code" class="headerlink" title="C++ Code"></a>C++ Code</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> c = <span class="string">'q'</span>;  <span class="comment">// 01110001</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> ans = ~c &lt;&lt; <span class="number">6</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-7296</span><br></pre></td></tr></table></figure>
+<h4 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h4><h5 id="Code-Perform-Step"><a href="#Code-Perform-Step" class="headerlink" title="Code Perform Step"></a>Code Perform Step</h5><ul>
+<li><p>left-associative:  <code>~&#39;q&#39; &lt;&lt; 6</code> equivalence with <code>(~&#39;q&#39;) &lt;&lt; 6</code></p>
+</li>
+<li><p>promoted to int for <code>~&#39;q&#39;</code>:  <code>~(01110001b)</code> to <code>~(00000000 00000000 00000000 01110001 b)</code></p>
+</li>
+<li><p>Bitwise Not operator(<code>~</code>): <code>(11111111 11111111 11111111 1000110b) &lt;&lt; 6</code></p>
+<a id="more"></a></li>
+<li><p>left-shift operator(<code>&lt;&lt;</code>) : <code>11 11111111 11111111 1000110 000000b</code></p>
+</li>
+<li><p>computation binary number:</p>
+<p>   11111111 11111111 1110001 10000000b<br>   True form: 10000000 00000000 0001110 10000000 b</p>
+<p>​    -(2^11 + 2^10 + 2^9 + 2^7)  =  - (2048 + 1024 + 512 + 128) = -3712 what? Oh, No</p>
+</li>
+</ul>
+<h5 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">oh, lose an zero in Bitwise Not operator step. so computation:</span><br><span class="line">modify:</span><br><span class="line">   (11111111 11111111 11111111 100011 1 0b) &lt;&lt; 6</span><br><span class="line">    11111111 11111111 11100011 10000000 b</span><br><span class="line">new [true form] : 10000000 00000000 00011100 10000000 b</span><br><span class="line">  - (2^12 + 2^11 + 2^10  + 2^7) &#x3D; - (4096 + 2048 + 1024 + 128) &#x3D; -7296 Oh, Yell</span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<h3 id="Ex-4-26"><a href="#Ex-4-26" class="headerlink" title="Ex:4.26"></a>Ex:4.26</h3><ul>
+<li>Because of Bits of int type could different in machine.As usual, it’s is that great than and quals 16bit.</li>
+</ul>
+<h3 id="Ex-4-27"><a href="#Ex-4-27" class="headerlink" title="Ex:4.27"></a>Ex:4.27</h3><p>What is the result of each of these of expressions?</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">long</span> ull = <span class="number">3</span>, ul2 = <span class="number">7</span>;</span><br><span class="line">	(a) ull &amp; ul2 </span><br><span class="line">    (b) ull | ul2 </span><br><span class="line">    (c) ull &amp;&amp; ul2 </span><br><span class="line">    (d) ull || ul2</span><br></pre></td></tr></table></figure>
+<h4 id="Program-Test-g-for-linux-1"><a href="#Program-Test-g-for-linux-1" class="headerlink" title="Program Test(g++ for linux)"></a>Program Test(g++ for linux)</h4><h5 id="C-Code-1"><a href="#C-Code-1" class="headerlink" title="C++ Code"></a>C++ Code</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> ul1 = <span class="number">3</span>, ul2 = <span class="number">7</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (ul1 &amp; ul2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (ul1 | ul2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (ul1 &amp;&amp; ul2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (ul1 || ul2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">7</span><br><span class="line">1</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<h4 id="Analysis-1"><a href="#Analysis-1" class="headerlink" title="Analysis"></a>Analysis</h4><h5 id="Binary-Number-View-bit-op-amp-logic-op"><a href="#Binary-Number-View-bit-op-amp-logic-op" class="headerlink" title="Binary Number View(bit op &amp; logic op)"></a>Binary Number View(bit op &amp; logic op)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ul1 &#x3D; 3  -&gt;  000...00011</span><br><span class="line">ul2 &#x3D; 7  -&gt;  000...00111</span><br></pre></td></tr></table></figure>
+<h6 id="Bit-Op-amp"><a href="#Bit-Op-amp" class="headerlink" title="Bit-Op (&amp;, |)"></a>Bit-Op (&amp;, |)</h6><p>&amp; op</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   000...00011</span><br><span class="line">&amp;  000...00111</span><br><span class="line">------------------------</span><br><span class="line">   000...00011  --&gt; 3</span><br></pre></td></tr></table></figure>
+<p>| op</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   000...00011</span><br><span class="line">|  000...00111</span><br><span class="line">------------------------</span><br><span class="line">   000...00111  --&gt; 3</span><br></pre></td></tr></table></figure>
+<h6 id="Logic-Op-amp-amp"><a href="#Logic-Op-amp-amp" class="headerlink" title="Logic-Op (&amp;&amp;, ||)"></a>Logic-Op (&amp;&amp;, ||)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7 &amp;&amp; 3 --&gt;  true &amp;&amp; true --&gt; true(1)</span><br></pre></td></tr></table></figure>
+<p>|| op</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7 || 3 --&gt;  true &amp;&amp; true --&gt; true(1)</span><br></pre></td></tr></table></figure>
+<h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><ul>
+<li>Ubuntu 18.x</li>
+<li>g++ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0</span><br><span class="line">Copyright (C) 2017 Free Software Foundation, Inc.</span><br><span class="line">This is free software; see the source for copying conditions.  There is NO</span><br><span class="line">warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
+<li>cpp primer 5th</li>
+<li>Youdao Dictionary (ha ha)[This is the worst he had ever been back a pot]</li>
+</ul>
 
     </div>
 
@@ -311,7 +358,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sunrisepeak.github.io/2020/02/16/Test/TestTypora/" title="Test Typora">https://sunrisepeak.github.io/2020/02/16/Test/TestTypora/</a>
+    <a href="https://sunrisepeak.github.io/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/" title="CppPrimer5th Exrecise Section 4.8">https://sunrisepeak.github.io/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -323,9 +370,10 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Test/" rel="tag"><i class="fa fa-tag"></i> Test</a>
-              <a href="/tags/Debug/" rel="tag"><i class="fa fa-tag"></i> Debug</a>
-              <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"></i> Markdown</a>
+              <a href="/tags/c/" rel="tag"><i class="fa fa-tag"></i> c++</a>
+              <a href="/tags/Bit-Op/" rel="tag"><i class="fa fa-tag"></i> Bit-Op</a>
+              <a href="/tags/%E4%BD%8D%E6%93%8D%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 位操作</a>
+              <a href="/tags/Logic-Op/" rel="tag"><i class="fa fa-tag"></i> Logic-Op</a>
           </div>
 
         
@@ -334,13 +382,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/02/16/Test/TestValineCommnet/" rel="prev" title="TestValineCommnet">
-      <i class="fa fa-chevron-left"></i> TestValineCommnet
+    <a href="/2020/02/16/Test/TestTypora/" rel="prev" title="Test Typora">
+      <i class="fa fa-chevron-left"></i> Test Typora
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/02/17/books-exercises/cpp/cpp-primer-5th/cpp-primer-5th-Ex4.8/" rel="next" title="CppPrimer5th Exrecise Section 4.8">
-      CppPrimer5th Exrecise Section 4.8 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -400,7 +445,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#this-is-Typora-test"><span class="nav-number">1.</span> <span class="nav-text">this is Typora test</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ex-4-25"><span class="nav-number">1.</span> <span class="nav-text">Ex: 4.25</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Program-Test-g-for-linux"><span class="nav-number">1.1.</span> <span class="nav-text">Program Test(g++ for linux)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#C-Code"><span class="nav-number">1.1.1.</span> <span class="nav-text">C++ Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Output"><span class="nav-number">1.1.2.</span> <span class="nav-text">Output:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Analysis"><span class="nav-number">1.2.</span> <span class="nav-text">Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Code-Perform-Step"><span class="nav-number">1.2.1.</span> <span class="nav-text">Code Perform Step</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Debug"><span class="nav-number">1.2.2.</span> <span class="nav-text">Debug</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ex-4-26"><span class="nav-number">2.</span> <span class="nav-text">Ex:4.26</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ex-4-27"><span class="nav-number">3.</span> <span class="nav-text">Ex:4.27</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Program-Test-g-for-linux-1"><span class="nav-number">3.1.</span> <span class="nav-text">Program Test(g++ for linux)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#C-Code-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">C++ Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Output-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">Output</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Analysis-1"><span class="nav-number">3.2.</span> <span class="nav-text">Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Binary-Number-View-bit-op-amp-logic-op"><span class="nav-number">3.2.1.</span> <span class="nav-text">Binary Number View(bit op &amp; logic op)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Bit-Op-amp"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">Bit-Op (&amp;, |)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Logic-Op-amp-amp"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">Logic-Op (&amp;&amp;, ||)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Environment"><span class="nav-number">4.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
