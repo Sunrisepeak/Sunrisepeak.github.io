@@ -23,7 +23,7 @@
 <p>we known [L, p) &gt; 0</p>
 <p>again, obvious [L, i] = [L, p) + [p, i]  &gt; 0;</p>
 <p>but [L, i] &lt; 0, so [p, i] &gt; 0 is mistake assumption.</p>
-<p>so, [p, i] &lt;= 0, can let L = i when [p, i] &lt; 0;</p>
+<p>so, [p, i] &lt;= 0, can let L = i when [L, i] &lt; 0;</p>
 </blockquote>
 </blockquote>
 <h5 id="Analysis-1"><a href="#Analysis-1" class="headerlink" title="Analysis"></a>Analysis</h5><blockquote>
