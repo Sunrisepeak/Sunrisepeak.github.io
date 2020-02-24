@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Divide-and-Conquer &gt;&gt; Maximum Contiguous Subsequence Sum Algorithms</title>
+    <url>/2020/02/24/cs/DS-Algorithms/max-subseq-sum/</url>
+    <content><![CDATA[<h4 id="Algorithms-1"><a href="#Algorithms-1" class="headerlink" title="Algorithms 1"></a>Algorithms 1</h4><blockquote>
+<p>‘Divide-and-Conquer’ by Recursive</p>
+</blockquote>
+<h5 id="Algorithms-Thinking"><a href="#Algorithms-Thinking" class="headerlink" title="Algorithms Thinking"></a>Algorithms Thinking</h5><blockquote>
+<p>​    For one thing, take a set divided into two part with left and right and work out max-sub-sum respectively. To left and right hand by recursive to process. In addition, computation maximum border subseq-sum of mid to left and to hand then add get new maxSubSum. In the end, return a max value in the three ‘maxSubSum’.</p>
+</blockquote>
+<a id="more"></a>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxSubSum</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[left] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> arr[left];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> leftMaxSSum = maxSubSum(arr, left, mid);</span><br><span class="line">        <span class="keyword">int</span> rightMaxSSum = maxSubSum(arr, mid + <span class="number">1</span>, right);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> maxLeftBorderSum = <span class="number">0</span>, leftBorderSum = <span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = mid; i &gt;= left; i--) &#123;</span><br><span class="line">            leftBorderSum += arr[i];</span><br><span class="line">            <span class="keyword">if</span> (leftBorderSum &gt; maxLeftBorderSum) &#123;</span><br><span class="line">                maxLeftBorderSum = leftBorderSum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> maxRightBorderSum = <span class="number">0</span>, rightBorderSum = <span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = mid + <span class="number">1</span>; i &lt;= right; i++) &#123;</span><br><span class="line">            rightBorderSum += arr[i];</span><br><span class="line">            <span class="keyword">if</span> (rightBorderSum &gt; maxRightBorderSum) &#123;</span><br><span class="line">                maxRightBorderSum = rightBorderSum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(maxLeftBorderSum + maxRightBorderSum, <span class="built_in">max</span>(leftMaxSSum, rightMaxSSum));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h5><h6 id="time-complexity-O-nlogn"><a href="#time-complexity-O-nlogn" class="headerlink" title="time complexity: $O(nlogn)$"></a>time complexity: $O(nlogn)$</h6><h4 id="Algorithms-2"><a href="#Algorithms-2" class="headerlink" title="Algorithms 2"></a>Algorithms 2</h4><blockquote>
+<p>Online Algorithms</p>
+</blockquote>
+<h5 id="Algorithms-Thinking-1"><a href="#Algorithms-Thinking-1" class="headerlink" title="Algorithms Thinking"></a>Algorithms Thinking</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[---------------------------]</span><br><span class="line">          |    |    |</span><br><span class="line">          L    p    i       index-pointer</span><br></pre></td></tr></table></figure>
+<h5 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxSubMax</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>, maxSum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> v : arr) &#123;</span><br><span class="line">        sum += v;</span><br><span class="line">        <span class="keyword">if</span> (sum &gt; maxSum) &#123;</span><br><span class="line">            maxSum = sum;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            sum = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxSum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h5><blockquote>
+<p>Why L-pointer skip to i when sum less than zero?</p>
+<p>assumption:    exist L &lt; p &lt; i , let [p, i] &gt; 0</p>
+<blockquote>
+<p>we known [L, p) &gt; 0</p>
+<p>again, obvious [L, i] = [L, p) + [p, i]  &gt; 0;</p>
+<p>but [L, i] &lt; 0, so [p, i] &gt; 0 is mistake assumption.</p>
+<p>so, [p, i] &lt;= 0, can let L = i when [p, i] &lt; 0;</p>
+</blockquote>
+</blockquote>
+<h5 id="Analysis-1"><a href="#Analysis-1" class="headerlink" title="Analysis"></a>Analysis</h5><blockquote>
+<p>tiem complexity: O(n)</p>
+</blockquote>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ul>
+<li><a href="https://book.douban.com/subject/26910665/" target="_blank" rel="noopener">Data Structures and Algorithms Analysis in C++</a></li>
+</ul>
+<h4 id="QuickLink"><a href="#QuickLink" class="headerlink" title="QuickLink"></a>QuickLink</h4><ul>
+<li><a href="https://sunrisepeak.github.io/">SPeakNote Blog</a></li>
+<li><a href="https://github.com/Sunrisepeak/RC-Note" target="_blank" rel="noopener">Makedown File Address</a></li>
+<li><a href="https://github.com/Sunrisepeak" target="_blank" rel="noopener">Github</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>cs</category>
+        <category>DS&amp;Algorithms</category>
+      </categories>
+      <tags>
+        <tag>Divide-and-Conquer</tag>
+        <tag>Online-Algorithms</tag>
+        <tag>Recursive</tag>
+        <tag>Algorithms</tag>
+        <tag>分治</tag>
+        <tag>在线处理</tag>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python-Collection &gt;&gt; Basic Operator of List[]</title>
     <url>/2020/02/18/cs/python/list-summary/</url>
     <content><![CDATA[<h4 id="Basic-Characteristics"><a href="#Basic-Characteristics" class="headerlink" title="Basic Characteristics"></a>Basic Characteristics</h4><blockquote>
@@ -98,8 +150,8 @@
       </categories>
       <tags>
         <tag>c++</tag>
-        <tag>位操作</tag>
         <tag>Bit-OP</tag>
+        <tag>位操作</tag>
         <tag>Logic-OP</tag>
       </tags>
   </entry>
